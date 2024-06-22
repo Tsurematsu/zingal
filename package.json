@@ -1,14 +1,12 @@
 {
   "name": "zingal",
   "version": "1.0.0",
-  "main": "./src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "src/index.js",
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Adaptación de zustand para react, con el fin de hacerlo más sencillo de usar y entender. como singal store",
   "dependencies": {
     "zustand": "^4.5.2"
   }
