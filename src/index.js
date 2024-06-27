@@ -38,6 +38,21 @@ export default function zingal(objeto) {
                                 return newArray.length;
                             };
                         }
+
+                        if (prop1 === "pop" && Array.isArray(target1)) {
+                            return function() {
+                                if (target1.length === 0) {
+                                    return undefined;
+                                }
+                                const newArray = [...target1];
+                                const poppedValue = newArray.pop();
+                                target[`set${capitalizar(prop)}`](newArray);
+                                return poppedValue;
+                            };
+                        }
+
+                        
+
                         if (typeof ResultadoReflect === 'object' && ResultadoReflect !== null) {
                             return new Proxy(ResultadoReflect, {
                                 set: function(obj, key, value) {
